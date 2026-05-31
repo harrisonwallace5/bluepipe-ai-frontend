@@ -1,61 +1,60 @@
+@import "tw-animate-css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    color: #ffffff;
-    background-color: #0f172a;
+    --radius: 1rem;
   }
 
   html {
-    scroll-behavior: smooth;
+    @apply bg-gray-50;
   }
 
   body {
-    @apply min-h-screen bg-navy font-sans text-white;
-    background-image:
-      radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 30%),
-      linear-gradient(180deg, #0f172a 0%, #111c31 45%, #0b1324 100%);
-  }
-
-  section[id] {
-    scroll-margin-top: 6rem;
+    @apply min-h-screen bg-gray-50 text-slate-900 antialiased;
+    font-family: 'Inter', sans-serif;
   }
 
   a {
-    @apply transition-colors duration-200;
+    @apply transition-colors;
   }
 
   button:focus-visible,
   a:focus-visible,
-  input:focus-visible {
-    @apply outline-none ring-2 ring-electric ring-offset-2 ring-offset-navy;
+  input:focus-visible,
+  [role="button"]:focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-white;
   }
 
   ::selection {
-    @apply bg-electric/40 text-white;
+    @apply bg-blue-100 text-slate-900;
+  }
+
+  * {
+    @apply border-gray-200;
   }
 }
 
 @layer components {
-  .section-shell {
-    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  .surface-card {
+    @apply rounded-2xl border border-gray-200 bg-white shadow-card;
   }
 
-  .panel {
-    @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm;
+  .page-heading {
+    @apply text-3xl font-semibold tracking-tight text-slate-950;
   }
 
-  .eyebrow {
-    @apply inline-flex items-center rounded-full border border-electric/30 bg-electric/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-electric;
+  .page-copy {
+    @apply text-sm leading-6 text-slate-600;
   }
 
-  .section-title {
-    @apply font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl;
+  .metric-chip {
+    @apply inline-flex items-center rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700;
   }
 
-  .muted-copy {
-    @apply text-sm leading-7 text-slate-300 sm:text-base;
+  .panel-grid {
+    @apply grid gap-6 xl:grid-cols-[1.2fr_0.8fr];
   }
 }
