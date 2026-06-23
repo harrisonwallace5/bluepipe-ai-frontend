@@ -4,6 +4,7 @@ import { Toaster } from 'sonner';
 import Layout from '@/components/Layout';
 import Dashboard from '@/pages/Dashboard';
 import History from '@/pages/History';
+import PhoneUsage from '@/pages/PhoneUsage';
 import Results from '@/pages/Results';
 import Upload from '@/pages/Upload';
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="results" element={<Results />} />
             <Route path="results/:analysisId" element={<Results />} />
             <Route path="history" element={<History />} />
+            <Route path="phone-usage" element={<PhoneUsage />} />
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

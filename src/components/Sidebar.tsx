@@ -1,4 +1,4 @@
-import { ClipboardCheck, Clock3, Home, Menu, Upload } from 'lucide-react';
+import { ClipboardCheck, Clock3, Home, Menu, Smartphone, Upload } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
@@ -26,6 +26,12 @@ const navigationItems = [
     description: 'Past analyses',
     to: '/history',
     icon: Clock3,
+  },
+  {
+    label: 'Phone Usage',
+    description: 'Daily screen time',
+    to: '/phone-usage',
+    icon: Smartphone,
   },
 ];
 

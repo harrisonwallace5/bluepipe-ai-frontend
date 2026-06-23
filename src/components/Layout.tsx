@@ -27,6 +27,11 @@ const routeCopy = [
     title: 'Analysis history',
     description: 'Browse previously processed sheets and reopen any result set from your saved workspace history.',
   },
+  {
+    match: '/phone-usage',
+    title: 'Phone usage tracker',
+    description: 'Log your daily screen time by app, set category limits, and ask for an end-of-day review.',
+  },
 ];
 
 function resolveRouteCopy(pathname: string) {
